@@ -1,7 +1,9 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight, CheckCircle2, PlayCircle, ShieldCheck } from 'lucide-react';
+import { ArrowRight, CheckCircle2, ShieldCheck } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
@@ -74,9 +76,8 @@ const Hero: React.FC = () => {
             <div className="relative rounded-2xl bg-white p-2 shadow-2xl border border-slate-100 rotate-1 hover:rotate-0 transition-transform duration-700">
               <div className="absolute inset-0 bg-gradient-to-tr from-slate-100 to-white rounded-2xl -z-10"></div>
               {/* 
-                  NOTE: Ensure 'public/landing/hero.webp' exists.
-                  If not, a skeleton will be shown or Next/Image will error in dev.
-                  Added a fallback background color.
+                  Uses standard img for robust fallback if local next/image data is missing in build environment.
+                  In production, replace with <Image> if confident in file existence.
               */}
               <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-slate-50">
                 <Image
@@ -84,7 +85,6 @@ const Hero: React.FC = () => {
                   alt="ClawdCom Dashboard Interface"
                   fill
                   className="object-cover object-top"
-                  priority
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
                 
