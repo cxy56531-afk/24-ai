@@ -1,49 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ClawdCom - AI 运营官</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-      body {
-        font-family: 'Inter', sans-serif;
-        background-color: #f5f5f5;
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ClawdCom - AI E-commerce Ops</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            indigo: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+            }
+          },
+          animation: {
+            blob: "blob 7s infinite",
+            float: "float 6s ease-in-out infinite",
+            'bounce-slow': "bounce 3s infinite",
+          },
+          keyframes: {
+            blob: {
+              "0%": { transform: "translate(0px, 0px) scale(1)" },
+              "33%": { transform: "translate(30px, -50px) scale(1.1)" },
+              "66%": { transform: "translate(-20px, 20px) scale(0.9)" },
+              "100%": { transform: "translate(0px, 0px) scale(1)" },
+            },
+            float: {
+              "0%, 100%": { transform: "translateY(0)" },
+              "50%": { transform: "translateY(-20px)" },
+            }
+          },
+        }
       }
-      /* Ant Design Overrides for smoother blending with Tailwind */
-      :where(.css-dev-only-do-not-override-190m0j) a {
-        color: #1677ff;
-      }
-      .scrollbar-hide::-webkit-scrollbar {
-          display: none;
-      }
-      .scrollbar-hide {
-          -ms-overflow-style: none;
-          scrollbar-width: none;
-      }
-    </style>
+    }
+  </script>
   <script type="importmap">
 {
   "imports": {
-    "react": "https://esm.sh/react@18.3.1",
-    "react-dom/": "https://esm.sh/react-dom@18.3.1/",
-    "react/": "https://esm.sh/react@18.3.1/",
-    "dayjs": "https://esm.sh/dayjs@1.11.10",
-    "antd": "https://esm.sh/antd@5.15.0?bundle&deps=react@18.3.1,react-dom@18.3.1",
-    "@ant-design/icons": "https://esm.sh/@ant-design/icons@5.3.1?bundle&deps=react@18.3.1,react-dom@18.3.1",
-    "lucide-react": "https://esm.sh/lucide-react@0.363.0",
-    "@google/genai": "https://esm.sh/@google/genai@^1.38.0",
-    "tailwindcss": "https://esm.sh/tailwindcss@^4.1.18",
-    "next/": "https://esm.sh/next@^16.1.6/",
+    "react": "https://esm.sh/react@18.2.0?dev",
+    "react/": "https://esm.sh/react@18.2.0&dev/",
+    "react-dom": "https://esm.sh/react-dom@18.2.0?dev",
+    "react-dom/client": "https://esm.sh/react-dom@18.2.0/client?dev",
+    "lucide-react": "https://esm.sh/lucide-react@0.363.0?deps=react@18.2.0",
+    "antd": "https://esm.sh/antd@5.15.0?deps=react@18.2.0,react-dom@18.2.0",
+    "@google/genai": "https://esm.sh/@google/genai@0.4.0",
+    "@ant-design/cssinjs": "https://esm.sh/@ant-design/cssinjs@1.18.4?deps=react@18.2.0",
+    "tailwindcss": "https://esm.sh/tailwindcss@3.4.1",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "@ant-design/nextjs-registry": "https://esm.sh/@ant-design/nextjs-registry@^1.3.0",
     "next": "https://esm.sh/next@^16.1.6",
-    "@ant-design/cssinjs": "https://esm.sh/@ant-design/cssinjs@^2.0.3",
-    "@ant-design/nextjs-registry": "https://esm.sh/@ant-design/nextjs-registry@^1.3.0"
+    "next/": "https://esm.sh/next@^16.1.6/"
   }
 }
 </script>
 </head>
-  <body>
-    <div id="root"></div>
-  </body>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
 </html>

@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced for Preview compatibility
 import { ShieldCheck } from 'lucide-react';
 
 const Footer: React.FC = () => {
@@ -26,25 +26,25 @@ const Footer: React.FC = () => {
             <div>
               <h4 className="font-bold text-slate-900 mb-4 text-sm uppercase tracking-wider">产品</h4>
               <ul className="space-y-3 text-sm text-slate-600">
-                <li><Link href="#" className="hover:text-indigo-600">功能特性</Link></li>
-                <li><Link href="#" className="hover:text-indigo-600">价格方案</Link></li>
-                <li><Link href="#" className="hover:text-indigo-600">更新日志</Link></li>
+                <li><a href="#" className="hover:text-indigo-600">功能特性</a></li>
+                <li><a href="#" className="hover:text-indigo-600">价格方案</a></li>
+                <li><a href="#" className="hover:text-indigo-600">更新日志</a></li>
               </ul>
             </div>
             <div>
               <h4 className="font-bold text-slate-900 mb-4 text-sm uppercase tracking-wider">资源</h4>
               <ul className="space-y-3 text-sm text-slate-600">
-                <li><Link href="#" className="hover:text-indigo-600">帮助文档</Link></li>
-                <li><Link href="#" className="hover:text-indigo-600">API 文档</Link></li>
-                <li><Link href="#" className="hover:text-indigo-600">社区</Link></li>
+                <li><a href="#" className="hover:text-indigo-600">帮助文档</a></li>
+                <li><a href="#" className="hover:text-indigo-600">API 文档</a></li>
+                <li><a href="#" className="hover:text-indigo-600">社区</a></li>
               </ul>
             </div>
             <div>
               <h4 className="font-bold text-slate-900 mb-4 text-sm uppercase tracking-wider">公司</h4>
               <ul className="space-y-3 text-sm text-slate-600">
-                <li><Link href="#" className="hover:text-indigo-600">关于我们</Link></li>
-                <li><Link href="#" className="hover:text-indigo-600">联系客服</Link></li>
-                <li><Link href="#" className="hover:text-indigo-600">隐私条款</Link></li>
+                <li><a href="#" className="hover:text-indigo-600">关于我们</a></li>
+                <li><a href="#" className="hover:text-indigo-600">联系客服</a></li>
+                <li><a href="#" className="hover:text-indigo-600">隐私条款</a></li>
               </ul>
             </div>
           </div>

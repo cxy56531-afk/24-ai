@@ -1,8 +1,8 @@
 'use client';
 
 import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
+// import Image from 'next/image'; // Replaced for Preview compatibility
+// import Link from 'next/link';   // Replaced for Preview compatibility
 import { ArrowRight, CheckCircle2, ShieldCheck } from 'lucide-react';
 
 const Hero: React.FC = () => {
@@ -44,17 +44,17 @@ const Hero: React.FC = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-in fade-in slide-in-from-bottom-10 duration-700 delay-400">
-              <Link href="/dashboard" className="w-full sm:w-auto">
+              <a href="/dashboard" className="w-full sm:w-auto">
                 <button className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white bg-indigo-600 rounded-xl shadow-xl shadow-indigo-200 hover:bg-indigo-700 hover:-translate-y-1 transition-all">
                   我是国内卖家
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </button>
-              </Link>
-              <Link href="/dashboard" className="w-full sm:w-auto">
+              </a>
+              <a href="/dashboard" className="w-full sm:w-auto">
                 <button className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-base font-bold text-slate-700 bg-white border border-slate-200 rounded-xl hover:bg-slate-50 hover:border-slate-300 hover:-translate-y-1 transition-all shadow-sm">
                   我是跨境卖家
                 </button>
-              </Link>
+              </a>
             </div>
 
             <div className="mt-8 flex items-center justify-center lg:justify-start gap-6 text-sm text-slate-500 animate-in fade-in duration-1000 delay-500">
@@ -76,16 +76,14 @@ const Hero: React.FC = () => {
             <div className="relative rounded-2xl bg-white p-2 shadow-2xl border border-slate-100 rotate-1 hover:rotate-0 transition-transform duration-700">
               <div className="absolute inset-0 bg-gradient-to-tr from-slate-100 to-white rounded-2xl -z-10"></div>
               {/* 
-                  Uses standard img for robust fallback if local next/image data is missing in build environment.
-                  In production, replace with <Image> if confident in file existence.
+                  Replaced <Image> with <img> for preview environment. 
+                  Simulating Next.js 'fill' prop with 'absolute inset-0 w-full h-full'.
               */}
               <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-slate-50">
-                <Image
+                <img
                   src="/landing/hero.webp"
                   alt="ClawdCom Dashboard Interface"
-                  fill
-                  className="object-cover object-top"
-                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover object-top w-full h-full absolute inset-0"
                 />
                 
                 {/* Floating Elements (Decor) */}
