@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 245, 245, 245; /* #f5f5f5 */
+  --background-end-rgb: 245, 245, 245;
+}
+
+body {
+  background-color: #f5f5f5;
+  color: rgb(var(--foreground-rgb));
+  font-family: 'Inter', sans-serif;
+}
+
+/* Scrollbar hiding utility from previous index.html */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Fix for Ant Design + Tailwind Preflight disabled: ensure border-box */
+*, ::before, ::after {
+  box-sizing: border-box;
+}
