@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { List, Button, Tag, Typography, Modal, Space, notification } from 'antd';
-import { CheckOutlined, CloseOutlined, ExclamationCircleOutlined } from '@ant-design/icons';
+import { Check, X, AlertCircle } from 'lucide-react';
 import { getMockActionQueue } from '../../services/mockService';
 import { ActionTask } from '../../types';
 
@@ -17,7 +17,7 @@ const ActionQueue: React.FC = () => {
   const handleApprove = (task: ActionTask) => {
     Modal.confirm({
       title: '确认执行此高风险操作？',
-      icon: <ExclamationCircleOutlined />,
+      icon: <AlertCircle className="text-yellow-500 mr-2" size={24} />,
       content: `系统将立即对 ${task.platform} 执行 "${task.title}"。此操作不可撤销。`,
       okText: '确认执行',
       okType: 'danger',
@@ -62,11 +62,11 @@ const ActionQueue: React.FC = () => {
               </div>
               
               <Space>
-                <Button danger icon={<CloseOutlined />}>拒绝</Button>
+                <Button danger icon={<X size={16} />}>拒绝</Button>
                 <Button 
                   type="primary" 
                   danger 
-                  icon={<CheckOutlined />} 
+                  icon={<Check size={16} />} 
                   onClick={() => handleApprove(item)}
                   size="large"
                 >
@@ -80,7 +80,7 @@ const ActionQueue: React.FC = () => {
       
       {tasks.length === 0 && (
          <div className="text-center py-20 bg-gray-50 rounded-lg border border-dashed border-gray-300">
-            <CheckOutlined style={{ fontSize: 48, color: '#52c41a', marginBottom: 16 }} />
+            <Check size={48} className="text-[#52c41a] mb-4 mx-auto" />
             <Title level={4}>太棒了！</Title>
             <Text type="secondary">当前没有待审批的高风险动作。</Text>
          </div>

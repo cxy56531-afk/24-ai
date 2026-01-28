@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Card, Button, Row, Col, Tag, Badge, Tabs, Typography, Empty } from 'antd';
-import { PlusOutlined, ReloadOutlined, LinkOutlined } from '@ant-design/icons';
+import { Plus, RefreshCw, Link } from 'lucide-react';
 import { getMockIntegrations } from '../../services/mockService';
 import { Integration } from '../../types';
 
@@ -26,8 +26,8 @@ const IntegrationHub: React.FC = () => {
     <Col xs={24} md={12} xl={8} key={item.id}>
       <Card 
         actions={[
-          <Button type="text" key="config" icon={<LinkOutlined />}>配置权限</Button>,
-          <Button type="text" key="sync" icon={<ReloadOutlined />}>立即同步</Button>
+          <Button type="text" key="config" icon={<Link size={16} />}>配置权限</Button>,
+          <Button type="text" key="sync" icon={<RefreshCw size={16} />}>立即同步</Button>
         ]}
         className="shadow-sm hover:shadow-md transition-all"
       >
@@ -69,7 +69,7 @@ const IntegrationHub: React.FC = () => {
           {integrations.map(renderCard)}
           <Col xs={24} md={12} xl={8}>
             <Button type="dashed" block className="h-full min-h-[180px] flex flex-col items-center justify-center text-gray-400">
-              <PlusOutlined style={{ fontSize: 24, marginBottom: 8 }} />
+              <Plus size={24} className="mb-2" />
               连接新店铺
             </Button>
           </Col>
@@ -95,7 +95,7 @@ const IntegrationHub: React.FC = () => {
           <Title level={3} style={{ marginBottom: 0 }}>集成中心</Title>
           <Paragraph type="secondary" style={{ marginBottom: 0 }}>管理全球电商平台连接，配置数据读取与执行权限。</Paragraph>
         </div>
-        <Button type="primary" icon={<PlusOutlined />}>添加新店铺</Button>
+        <Button type="primary" icon={<Plus size={16} />}>添加新店铺</Button>
       </div>
 
       <Tabs defaultActiveKey="all" items={items} />
