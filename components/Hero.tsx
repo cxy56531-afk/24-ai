@@ -54,7 +54,7 @@ const Hero: React.FC<{ onCtaClick: () => void }> = ({ onCtaClick }) => {
             </div>
             
             <div className="mt-8 flex items-center justify-center lg:justify-start space-x-6 text-sm text-slate-500">
-              <span className="flex items-center"><CheckCircle className="w-4 h-4 mr-1 text-emerald-500"/> 7天免费试用</span>
+              <span className="flex items-center"><CheckCircle className="w-4 h-4 mr-1 text-emerald-500"/> 1天免费试用</span>
               <span className="flex items-center"><CheckCircle className="w-4 h-4 mr-1 text-emerald-500"/> 随时取消</span>
               <span className="flex items-center"><CheckCircle className="w-4 h-4 mr-1 text-emerald-500"/> 独立IP隔离</span>
             </div>

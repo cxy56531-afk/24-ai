@@ -63,7 +63,7 @@ const Pricing: React.FC<PricingProps> = ({ onSelectPlan }) => {
               onClick={() => onSelectPlan(PlanTier.PRO)}
               className="mt-8 block w-full bg-indigo-600 text-white font-bold py-3 px-4 rounded-xl hover:bg-indigo-700 transition-colors shadow-lg shadow-indigo-500/50"
             >
-              免费试用 7 天
+              免费试用 1 天
             </button>
           </div>
 

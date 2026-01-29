@@ -58,7 +58,7 @@ const Header: React.FC = () => {
             </a>
             <a href="/dashboard">
               <button className="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all shadow-lg shadow-indigo-200 hover:shadow-indigo-300 transform hover:-translate-y-0.5">
-                免费试用 7 天
+                免费试用 1 天
               </button>
             </a>
           </div>

@@ -59,7 +59,7 @@ const Hero: React.FC = () => {
 
             <div className="mt-8 flex items-center justify-center lg:justify-start gap-6 text-sm text-slate-500 animate-in fade-in duration-1000 delay-500">
               <span className="flex items-center gap-1.5">
-                <CheckCircle2 className="w-4 h-4 text-emerald-500" /> 7天免费试用
+                <CheckCircle2 className="w-4 h-4 text-emerald-500" /> 1天免费试用
               </span>
               <span className="flex items-center gap-1.5">
                 <CheckCircle2 className="w-4 h-4 text-emerald-500" /> 独立 IP 隔离

@@ -46,7 +46,7 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
               onClick={() => onNavigate('dashboard')}
               className="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2 rounded-full text-sm font-semibold transition-all shadow-lg hover:shadow-indigo-500/30"
             >
-              免费试用 7 天
+              免费试用 1 天
             </button>
           </div>
 
