@@ -44,13 +44,13 @@ const Hero: React.FC = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-in fade-in slide-in-from-bottom-10 duration-700 delay-400">
-              <a href="/dashboard" className="w-full sm:w-auto">
+              <a href="#pricing" className="w-full sm:w-auto">
                 <button className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white bg-indigo-600 rounded-xl shadow-xl shadow-indigo-200 hover:bg-indigo-700 hover:-translate-y-1 transition-all">
                   我是国内卖家
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </button>
               </a>
-              <a href="/dashboard" className="w-full sm:w-auto">
+              <a href="#pricing" className="w-full sm:w-auto">
                 <button className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-base font-bold text-slate-700 bg-white border border-slate-200 rounded-xl hover:bg-slate-50 hover:border-slate-300 hover:-translate-y-1 transition-all shadow-sm">
                   我是跨境卖家
                 </button>

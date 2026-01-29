@@ -34,7 +34,7 @@ const Pricing: React.FC = () => {
               ))}
             </ul>
             <a 
-              href="/dashboard"
+              href="/login?plan=basic"
               className="mt-8 block w-full bg-indigo-50 text-indigo-700 font-bold py-4 px-6 rounded-xl hover:bg-indigo-100 transition-colors text-center"
             >
               选择基础版
@@ -63,7 +63,7 @@ const Pricing: React.FC = () => {
               ))}
             </ul>
             <a 
-              href="/dashboard"
+              href="/login?plan=pro"
               className="mt-8 block w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-bold py-4 px-6 rounded-xl hover:shadow-lg hover:shadow-indigo-500/30 transition-all text-center"
             >
               免费试用 1 天
